@@ -1,0 +1,428 @@
+{
+	"info": {
+		"_postman_id": "de82db8e-76a2-483b-b069-a2bfde83adbc",
+		"name": "Challenge Assessment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Insert Zip Code",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/insert/:zip_code",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"insert",
+						":zip_code"
+					],
+					"variable": [
+						{
+							"key": "zip_code",
+							"value": "899774444"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Already Added Zip Code",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/insert/:zip_code",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"insert",
+								":zip_code"
+							],
+							"variable": [
+								{
+									"key": "zip_code",
+									"value": "899778"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "35"
+						},
+						{
+							"key": "Server",
+							"value": "Werkzeug/1.0.1 Python/3.8.0"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 19 Oct 2021 01:42:09 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Already added 899778\"\n}"
+				},
+				{
+					"name": "Added Zip Code",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/insert/:zip_code",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"insert",
+								":zip_code"
+							],
+							"variable": [
+								{
+									"key": "zip_code",
+									"value": "899774444"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "30"
+						},
+						{
+							"key": "Server",
+							"value": "Werkzeug/1.0.1 Python/3.8.0"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 19 Oct 2021 01:42:40 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Added 899774444\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Zip Code",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/delete/:zip_code",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"delete",
+						":zip_code"
+					],
+					"variable": [
+						{
+							"key": "zip_code",
+							"value": "899778"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Zip Code Not Found",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/delete/:zip_code",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"delete",
+								":zip_code"
+							],
+							"variable": [
+								{
+									"key": "zip_code",
+									"value": "898888"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "54"
+						},
+						{
+							"key": "Server",
+							"value": "Werkzeug/1.0.1 Python/3.8.0"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 19 Oct 2021 01:41:09 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Zip code 898888 was not found in system\"\n}"
+				},
+				{
+					"name": "Zip Code Found",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/delete/:zip_code",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"delete",
+								":zip_code"
+							],
+							"variable": [
+								{
+									"key": "zip_code",
+									"value": "899778"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "29"
+						},
+						{
+							"key": "Server",
+							"value": "Werkzeug/1.0.1 Python/3.8.0"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 19 Oct 2021 01:41:44 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Deleted 899778\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Check for Zip Code",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/has/:zip_code",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"has",
+						":zip_code"
+					],
+					"variable": [
+						{
+							"key": "zip_code",
+							"value": "8997788"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Zip Code Found",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/has/:zip_code",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"has",
+								":zip_code"
+							],
+							"variable": [
+								{
+									"key": "zip_code",
+									"value": "899778"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "17"
+						},
+						{
+							"key": "Server",
+							"value": "Werkzeug/1.0.1 Python/3.8.0"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 19 Oct 2021 01:40:11 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": true\n}"
+				},
+				{
+					"name": "Zip Code Not Found",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/has/:zip_code",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"has",
+								":zip_code"
+							],
+							"variable": [
+								{
+									"key": "zip_code",
+									"value": "8997788"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "18"
+						},
+						{
+							"key": "Server",
+							"value": "Werkzeug/1.0.1 Python/3.8.0"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 19 Oct 2021 01:40:44 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": false\n}"
+				}
+			]
+		},
+		{
+			"name": "Display Zip Codes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/display",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"display"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Display Zip Codes",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/display",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"display"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "45"
+						},
+						{
+							"key": "Server",
+							"value": "Werkzeug/1.0.1 Python/3.8.0"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 19 Oct 2021 01:38:59 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": [\n        \"999\",\n        \"10223 - 10227\",\n        \"109999\"\n    ]\n}"
+				}
+			]
+		}
+	]
+}
